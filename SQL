@@ -20,7 +20,7 @@ SELECT product_line,
 - SELECTED TABLE.
 FROM sales
 
-- WHERE STATEMENT to filter client_type AS WHOLESALE.
+## WHERE STATEMENT to filter client_type AS WHOLESALE.
 WHERE client_type = 'Wholesale'
 
 - SELECTED TABLE TO DISPLAY AS RESULT.
