@@ -1,3 +1,5 @@
+- Import a HTML file and watch it magically convert to Markdown
+
 - CHOOSE 'product_line' TABLE FROM 'sales' TABLES.
 
 SELECT product_line,
