@@ -1,9 +1,9 @@
->CHOOSE 'product_line' TABLE FROM 'sales' TABLES
+> CHOOSE 'product_line' TABLE FROM 'sales' TABLES
 
 SELECT product_line,
 
 
->USE A 'CASE WHEN' AND 'EXTRACT' TO 'month' FROM 'date' TO CREATE 'month' COLUMMN
+> USE A 'CASE WHEN' AND 'EXTRACT' TO 'month' FROM 'date' TO CREATE 'month' COLUMMN
 
     CASE WHEN EXTRACT('month' from date) = 6 THEN 'June'
         WHEN EXTRACT('month' from date) = 7 THEN 'July'
@@ -11,19 +11,19 @@ SELECT product_line,
     END as month,
     warehouse,
    
->cast it to the numeric data type first, To round net_revenue
+> cast it to the numeric data type first, To round net_revenue
 
     ROUND(SUM(total * (1 - payment_fee))::numeric, 2) AS net_revenue
 
->SELECTED TABLE
+> SELECTED TABLE
 FROM sales
 
 >WHERE STATEMENT to filter client_type AS WHOLESALE
 WHERE client_type = 'Wholesale'
 
->SELECTED TABLE TO DISPLAY AS RESULT
+> SELECTED TABLE TO DISPLAY AS RESULT
 
 GROUP BY product_line, warehouse, month
 
->ORDER TABLE AS DESCENDING
+> ORDER TABLE AS DESCENDING
 ORDER BY product_line, month, net_revenue DESC
