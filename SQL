@@ -13,7 +13,7 @@ SELECT product_line,
     END as month,
     warehouse,
    
-- cast it to the numeric data type first, To round net_revenue.
+[cast it to the numeric data type first, To round net_revenue.]
 
     ROUND(SUM(total * (1 - payment_fee))::numeric, 2) AS net_revenue
 
@@ -27,14 +27,6 @@ WHERE client_type = 'Wholesale'
 
 GROUP BY product_line, warehouse, month
 
-- ORDER TABLE AS DESCENDING.
+ORDER TABLE AS DESCENDING.
 
 ORDER BY product_line, month, net_revenue DESC
-
- > The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
