@@ -28,3 +28,5 @@ GROUP BY product_line, warehouse, month
 > ORDER TABLE AS DESCENDING.
 
 ORDER BY product_line, month, net_revenue DESC
+
+> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
